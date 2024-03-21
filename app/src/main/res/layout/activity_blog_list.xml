@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvLearnTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Learn"
+        android:gravity="start"
+        android:textSize="24sp"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/purple_700"
+        android:layout_below="@id/tvLearnTitle"/>
+
+    <!-- Container for the RecyclerView and potentially the fragment -->
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvLearnTitle">
+
+        <!-- RecyclerView initially inside the FrameLayout -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/blog_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"/>
+
+    </FrameLayout>
+
+</RelativeLayout>
